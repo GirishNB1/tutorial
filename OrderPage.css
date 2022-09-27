@@ -1,0 +1,49 @@
+body{
+    /* background-color: bisque; */
+    background-image: url("https://thumbs.dreamstime.com/b/asian-food-background-various-ingredients-rustic-stone-top-view-vietnam-thai-cuisine-148762904.jpg");
+    align-items: center;
+}
+#container{
+    background-color: antiquewhite;
+    opacity: 0.9;
+    width:1000px;
+    margin: 0 auto;
+}
+#user_adress{
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 2px 5px 10px black;
+
+}
+a{
+    text-decoration: none;
+    height: 10px;
+    width: 100px;
+    border-radius: 5px;
+    background-color:red;
+    padding: 3px;
+}
+
+#food_item_container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+}
+.foods{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: blanchedalmond;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px black;
+    margin-top: 8px;
+    justify-content: space-evenly;
+    /* border: 1px solid;
+    box-shadow: 2px 5px burlywoods; */
+}
+.spec{
+    text-align: center;
+}
