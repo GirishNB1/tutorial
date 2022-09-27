@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+    <link rel="stylesheet" href="OrderPage.css">
+</head>
+
+<body>
+    <div id="container">
+
+    <div id="user_adress"> 
+       Girish N
+       <br>
+       Near Sanjeevini circle
+       <br>
+        XDFFGSG badavane
+       <br>
+       hebbal 1st Stage 
+       <br>
+       Lokanayaka nagara
+       <br>
+       <br>
+       <div id="address"><a href="#">Change Adress</a></div>
+
+    </div>
+
+
+
+    <br>
+
+    <div id="food_item_container">
+        <script>
+            
+            for(let i=0;i<3;i++)
+            {
+                let ele=document.createElement("div");
+                 ele.setAttribute("class","foods");
+                 let d2="food"+1;
+                 ele.setAttribute("id",d2);
+
+                 let ele1=document.createElement("div");
+                 ele1.setAttribute("class","spec");
+                  let text1=document.createTextNode("chicken biriyani");
+                  ele1.appendChild(text1);
+
+
+
+                 let ele2=document.createElement("div");
+                 ele2.setAttribute("class","spec");
+                 let text2=document.createTextNode("Rupess 400");
+                 ele2.appendChild(text2);
+
+
+                 let ele3=document.createElement("div");
+                 ele3.setAttribute("class","spec");
+
+                 let button_dec=document.createElement("button");
+                 button_dec.onclick= function up() {
+                    document.getElementById("input"+i).stepDown();
+                    
+                 };
+                 //button_dec.setAttribute("onclick","down()");
+                 let text3=document.createTextNode("-");
+                 button_dec.appendChild(text3);
+
+                 let input=document.createElement("input");
+                 input.setAttribute("type","number");
+                 input.setAttribute("id","input"+i)
+                 input.setAttribute("min","0");
+
+                 let button_incr=document.createElement("button");
+                //  button_incr.setAttribute("onclick","up()");
+                button_incr.onclick=function up() {
+                    document.getElementById("input"+i).stepUp();
+                    
+                }
+                 let text4=document.createTextNode("+");
+                 button_incr.appendChild(text4);
+
+                 ele3.appendChild(button_dec);
+                 ele3.appendChild(input);
+                 ele3.appendChild(button_incr);
+
+
+
+                 let ele4=document.createElement("div");
+                 ele4.setAttribute("class","spec");
+                 let button_remove=document.createElement("button");
+                 let text5=document.createTextNode("Remove");
+                 button_remove.appendChild(text5);
+                 button_remove.onclick=function removed() {
+                    document.getElementById(d2).remove();
+                    
+                 }
+                 ele4.appendChild(button_remove);
+
+                 
+
+
+                 ele.appendChild(ele1);
+                 ele.appendChild(ele2);
+                 ele.appendChild(ele3);
+                 ele.appendChild(ele4);
+                 let container=document.getElementById("food_item_container");
+                 container.appendChild(ele);
+
+            }
+
+
+           
+        </script>
+        
+
+    </div>
+
+   
+    
+    <div id="bill_container">
+      sjdkdk
+      <br>
+      gje
+      <br>
+      brr
+      <br>
+    </div>
+
+
+</div>
+    
+</body>
+<script>
+               function down() {
+                document.getElementById("food1").stepDown();
+                
+            }
+            function up() {
+                document.getElementById("food1").stepUp();      
+            }
+            function removed() {
+                var data= document.getElementById("food1");
+                data.remove();
+                
+            }
+</script>
+</html>
